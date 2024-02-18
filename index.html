@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="head">
         <nav>
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
@@ -50,8 +50,8 @@
                         <li><a>Search</a></li>
                     </ul>
                 </div>
-                <div class="navbar-end">
-                    <a class="btn">Bus <span></span></a>
+                <div class="navbar-end ">
+                    <a class="btn bg-green-200">Bus <span><img src="images/bus-icon.png" alt=""></span></a>
                 </div>
             </div>
         </nav>
@@ -64,14 +64,14 @@
                                 class="text-green-600 text-6xl">DS Paribahan</span></h1>
                         <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
                             integrated testing features allow for a streamlined .</p>
-                        <button class="btn btn-primary">Buy Tickets</button>
+                        <button  onclick="hide()" class="btn btn-primary">Buy Tickets</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="mt-20">
+        <section id="discount" class="mt-20">
             <h1 class="text-4xl font-bold text-center">Best offers for you</h1>
             <div class="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
                 <div class="flex bg-[#FFBF0F] rounded-xl  h-52 mt-10">
@@ -110,7 +110,12 @@
             </div>
 
         </section>
-        <section class="bg-[#F7F8F8]">
+        <section id="ticket-section" class="bg-[#F7F8F8] mt-20">
+            <div class="text-center p-10 space-y-5">
+                <h1 class="text-4xl font-bold">D.S Paribahan</h1>
+                <p class="text-xl">Yes, you can run unit tests and view the results directly within the app. The
+                    integrated testing features allow for a streamlined .</p>
+            </div>
             <div class="flex bg-white">
                 <div class="w-4/6">
                     <div>
@@ -126,7 +131,7 @@
                             </div>
                             <div class="flex gap-1 bg-green-100 p-4 rounded-xl">
                                 <img src="images/seat-gray.png" alt="">
-                                <p class="text-[#1DD100]">40 Seats left</p>
+                                <p class="text-[#1DD100]"><span id="sit-number">8</span> Seats left</p>
                             </div>
                         </div>
                     </div>
@@ -142,7 +147,6 @@
                         </div>
                         <hr>
                         <div class="flex justify-around space-x-5 space-y-5 ">
-
                             <div class="bg-[#e1e0e0] p-5 rounded-xl font-semibold">
                                 <h1>Dropping Point - Bogura</h1>
                             </div>
@@ -154,24 +158,403 @@
                             </div>
                         </div>
                     </div>
-                    
-
-
                 </div>
                 <div>
                     <img class="w-full" src="images/info-devider.png" alt="">
                 </div>
-                <div class="">
+                <div class="min-h-screen justify-center items-center">
                     <img src="images/fare.png" alt="">
-                    <h1 class="text">550 Taka</h1>
-                    <p>per Seat</p>
+                    <h1 class="text-2xl font-bold">550 Taka</h1>
+                    <p class="text-xl">per Seat</p>
                 </div>
+
             </div>
+            <div class="bg-white p-10 -mt-60">
+                <div class='grid grid-cols-2 '>
+
+                    <div>
+                        <h1 class="text-2xl font-semibold p-5">Select Your Seat</h1>
+                        <hr>
+                        <div class="flex justify-around p-5">
+                            <div class="flex">
+                                <img src="images/seat-gray.png" alt="">
+                                <p>Available</p>
+                            </div>
+                            <div class="flex">
+                                <img src="images/seat-green.png" alt="">
+                                <p class="text-green-400">Selected</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-5 flex justify-end ">
+                            <button class="btn"><img src="images/Vector.svg"></button>
+                        </div>
+                        <div id="hide-element">
+                            <div id="show-element" class="hidden bg-slate-400 p-10 rounded-xl">
+                                <p class="text-2xl font-bold text-black">apni r sit select korte parben na vai</p>
+                            </div>
+                            <div class="grid grid-cols-5 space-y-2">
+                                <div class="flex justify-center items-center">
+                                    <h1>A</h1>
+                                </div>
+                                <div>
+                                    <button onclick="colorA1()" id="sit" class="btn">A1</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorA2()" id="sit2" class="btn">A2</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorA3()" id="sit3" class="btn">A3</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorA4()" id="sit4" class="btn">A4</button>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-5 space-y-2 ">
+                                <div class="flex justify-center items-center">
+                                    <h1>B</h1>
+                                </div>
+                                <div>
+                                    <button onclick="colorB1()"  id="sit5"class="btn">B1</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorB2()" id="sit6" class="btn">B2</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorB3()" id="sit7" class="btn">B3</button>
+                                </div>
+                                <div>
+                                    <button onclick="colorB4()" id="sit8" class="btn">B4</button>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-semibold p-5">Select your sit</h1>
+                        <hr>
+                        <div class="bg-[#F7F8F8]">
+
+                            <div class="p-5 space-y-5">
+                                <div class="grid grid-cols-3">
+                                    <h1 class="text-xl font-semibold">Seat <span id="count-sit" class="bg-green-500 p-2 rounded-xl">0</span></h1>
+                                    <h1 class="text-xl font-semibold">class</h1>
+                                    <h1 class="text-xl font-semibold">Price</h1>
+                                </div>
+                                <hr>
+
+                                <div id="append-method" class="grid grid-cols-3">
+                                    <!-- <h1>A1</h1>
+                                    <h1>Economy</h1>
+                                    <h1>550</h1>
+                                    <h1>B2</h1>
+                                    <h1>Economy</h1>
+                                    <h1>550</h1> -->
+                                </div>
+                                <hr>
+                                <div class="grid grid-cols-2">
+                                    <h1 class="text-xl font-semibold">Total Price</h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span id="add-price">0</span> </h1>
+                                </div>
+                                <div class="space-x-10">
+                                    <input id="apply-input" type="text" placeholder="Have any copupon?"
+                                        class="input input-bordered w-full max-w-xs" />
+                                    <button id="apply-button" disabled class="btn bg-green-500 ">Apply</button>
+                                </div>
+                                <div class="grid grid-cols-2">
+                                    <h1 class="text-xl font-semibold">Total Grand</h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mt-5">
+                            <h1 class="text-xl font-semibold">Passenger Name*</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="text" class="grow" placeholder="Enter your name" />
+                            </label>
+                            <h1 class="text-xl font-semibold">Phone Number*</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="number" class="grow" placeholder=" Enter your phone number" />
+                            </label>
+                            <h1 class="text-xl font-semibold">Email ID</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="email" class="grow" placeholder="Enter your email id" />
+                            </label>
+                            <button class="btn w-full bg-[#1DD100]">Next</button>
+                            <div class="flex justify-between">
+                                <a href="">Terms and Conditions</a>
+                                <a href="">Cancellation Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ticket section  -->
+        <section>
+            <!-- <div class="bg-white p-10">
+                <div class='grid grid-cols-2 '>
+
+                    <div>
+                        <h1 class="text-2xl font-semibold p-5">Select Your Seat</h1>
+                        <hr>
+                        <div class="flex justify-around p-5">
+                            <div class="flex">
+                                <img src="images/seat-gray.png" alt="">
+                                <p>Available</p>
+                            </div>
+                            <div class="flex">
+                                <img src="images/seat-green.png" alt="">
+                                <p class="text-green-400">Selected</p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="p-5 flex justify-end">
+                            <button class="btn"><img src="images/Vector.svg"></button>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>A</h1>
+                            </div>
+                            <div>
+                                <button class="btn">A1</button>
+                            </div>
+                            <div>
+                                <button class="btn">A2</button>
+                            </div>
+                            <div>
+                                <button class="btn">A3</button>
+                            </div>
+                            <div>
+                                <button class="btn">A4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2 ">
+                            <div class="flex justify-center items-center">
+                                <h1>B</h1>
+                            </div>
+                            <div>
+                                <button class="btn">B1</button>
+                            </div>
+                            <div>
+                                <button class="btn">B2</button>
+                            </div>
+                            <div>
+                                <button class="btn">B3</button>
+                            </div>
+                            <div>
+                                <button class="btn">B4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>C</h1>
+                            </div>
+                            <div>
+                                <button class="btn">C1</button>
+                            </div>
+                            <div>
+                                <button class="btn">C2</button>
+                            </div>
+                            <div>
+                                <button class="btn">C3</button>
+                            </div>
+                            <div>
+                                <button class="btn">C4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>D</h1>
+                            </div>
+                            <div>
+                                <button class="btn">D1</button>
+                            </div>
+                            <div>
+                                <button class="btn">D2</button>
+                            </div>
+                            <div>
+                                <button class="btn">D3</button>
+                            </div>
+                            <div>
+                                <button class="btn">D4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>E</h1>
+                            </div>
+                            <div>
+                                <button class="btn">E1</button>
+                            </div>
+                            <div>
+                                <button class="btn">E2</button>
+                            </div>
+                            <div>
+                                <button class="btn">E3</button>
+                            </div>
+                            <div>
+                                <button class="btn">E4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>F</h1>
+                            </div>
+                            <div>
+                                <button class="btn">F1</button>
+                            </div>
+                            <div>
+                                <button class="btn">F2</button>
+                            </div>
+                            <div>
+                                <button class="btn">F3</button>
+                            </div>
+                            <div>
+                                <button class="btn">F4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>G</h1>
+                            </div>
+                            <div>
+                                <button class="btn">G1</button>
+                            </div>
+                            <div>
+                                <button class="btn">G2</button>
+                            </div>
+                            <div>
+                                <button class="btn">G3</button>
+                            </div>
+                            <div>
+                                <button class="btn">G4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>H</h1>
+                            </div>
+                            <div>
+                                <button class="btn">H1</button>
+                            </div>
+                            <div>
+                                <button class="btn">H2</button>
+                            </div>
+                            <div>
+                                <button class="btn">H3</button>
+                            </div>
+                            <div>
+                                <button class="btn">H4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>I</h1>
+                            </div>
+                            <div>
+                                <button class="btn">I1</button>
+                            </div>
+                            <div>
+                                <button class="btn">I2</button>
+                            </div>
+                            <div>
+                                <button class="btn">I3</button>
+                            </div>
+                            <div>
+                                <button class="btn">I4</button>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-5 space-y-2">
+                            <div class="flex justify-center items-center">
+                                <h1>J</h1>
+                            </div>
+                            <div>
+                                <button class="btn">J1</button>
+                            </div>
+                            <div>
+                                <button class="btn">J2</button>
+                            </div>
+                            <div>
+                                <button class="btn">J3</button>
+                            </div>
+                            <div>
+                                <button class="btn">J4</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 class="text-2xl font-semibold p-5">Select your sit</h1>
+                        <hr>
+                        <div class="bg-[#F7F8F8]">
+
+                            <div class="p-5 space-y-5">
+                                <div class="grid grid-cols-3">
+                                    <h1 class="text-xl font-semibold">Seat</h1>
+                                    <h1 class="text-xl font-semibold">class</h1>
+                                    <h1 class="text-xl font-semibold">Price</h1>
+                                </div>
+                                <hr>
+
+                                <div class="grid grid-cols-3">
+                                    <h1>C2</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                    <h1>C2</h1>
+                                    <h1>Economoy</h1>
+                                    <h1>550</h1>
+                                </div>
+                                <hr>
+                                <div class="grid grid-cols-2">
+                                    <h1 class="text-xl font-semibold">Total Price</h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
+                                </div>
+                                <div class="space-x-10">
+                                    <input type="text" placeholder="Have any copupon?"
+                                        class="input input-bordered w-full max-w-xs" />
+                                    <button class="btn btn-primary bg-green-500">Apply</button>
+
+                                </div>
+                                <div class="grid grid-cols-2">
+                                    <h1 class="text-xl font-semibold">Total Grand</h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mt-5">
+                            <h1 class="text-xl font-semibold">Passenger Name*</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="text" class="grow" placeholder="Enter your name" />
+                            </label>
+                            <h1 class="text-xl font-semibold">Phone Number*</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="number" class="grow" placeholder=" Enter your phone number" />
+                            </label>
+                            <h1 class="text-xl font-semibold">Email ID</h1>
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="email" class="grow" placeholder="Enter your email id" />
+                            </label>
+                            <button class="btn w-full bg-[#1DD100]">Next</button>
+                            <div class="flex justify-between">
+                                <a href="">Terms and Conditions</a>
+                                <a href="">Cancellation Policy</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> -->
         </section>
     </main>
     <footer>
 
     </footer>
+    <script src="script/script.js"></script>
+    <script src="script/utility.js"></script>
 </body>
 
 </html>
