@@ -23,14 +23,9 @@ function addColor(elementId) {
     countSit.innerText = newSitN;
 
 
-    if ( newSit < 4) {
-        const hideElement = document.getElementById(elementId);
-
-        // busSit.setAttribute('disabled',true);
-        hideElement.setAttribute('disabled',true);
-        
-        // const showElement = document.getElementById('show-element');
-        // showElement.classList.remove('hidden');
+    if ( newSit <= 4) {
+        const showElement = document.getElementById('hide-element');
+        showElement.classList.add('hidden');
     }
 
     // append sit number 

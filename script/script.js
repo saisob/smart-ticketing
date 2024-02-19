@@ -68,12 +68,9 @@ function grandPrice() {
     const discount = price * 0.15 || price * 0.20;
     const newPrice = price - discount;
     addPrice.innerText = newPrice;
-    // const discountPriceId = document.getElementById('discount-price-id');
-    // const discountPriceValue = discountPriceId.innerText;
-    // const discountValue = parseInt(discountPriceValue);
-    // const discount = discountValue + 550;
-    // discountPriceId = discount - (20 / 100);
-    // discountPriceId.innerText = discount;
+    
+    const showElement = document.getElementById('coupon');
+    showElement.classList.add('hidden');
 }
 
 
