@@ -1,7 +1,10 @@
 
+
 function addColor(elementId) {
     const busSit = document.getElementById(elementId);
     busSit.classList.add('bg-green-500');
+    
+    
 
     const sitNumber = document.getElementById('sit-number');
     const sitNumberValue = sitNumber.innerText;
@@ -15,28 +18,31 @@ function addColor(elementId) {
 
     const countSit = document.getElementById('count-sit');
     const countSitValue = countSit.innerText;
-    const sitt = parseInt(countSitValue);
-    const newSitt = sitt + 1;
-    countSit.innerText = newSitt;
+    const sitN = parseInt(countSitValue);
+    const newSitN = sitN + 1;
+    countSit.innerText = newSitN;
 
 
-    if (newSitt >= 4) {
-        const hideElement = document.getElementById("hide-element");
-        hideElement.classList.add('hidden');
+    if ( newSit < 4) {
+        const hideElement = document.getElementById(elementId);
+
+        // busSit.setAttribute('disabled',true);
+        hideElement.setAttribute('disabled',true);
+        
         // const showElement = document.getElementById('show-element');
         // showElement.classList.remove('hidden');
     }
 
-    // appent sit number 
+    // append sit number 
     const appendSit = document.getElementById('append-method');
     const h1 = document.createElement('h1');
 
-    const value = document.createTextNode('');
+    const value = document.createTextNode(elementId);
     h1.appendChild(value);
 
     appendSit.appendChild(h1);
 
-    // appent text Economy 
+    // append text Economy 
     const appendEconomy = document.getElementById('append-method');
     const h2 = document.createElement('h1');
 
@@ -55,13 +61,13 @@ function addColor(elementId) {
     appendTicketPrice.appendChild(h3);
 
 
-    // mot price 
-    const addPrice = document.getElementById('add-price');
-    const addPriceValue = addPrice.innerText;
-    const price = parseInt(addPriceValue);
-    const newPrice = price + 550;
-    addPrice.innerText = newPrice;
+    // add price 
 
-
+    priceAdd('add-price');
+    priceAdd('discount-price-id');
 }
+
+
+
+
 

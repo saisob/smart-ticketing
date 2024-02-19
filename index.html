@@ -64,7 +64,7 @@
                                 class="text-green-600 text-6xl">DS Paribahan</span></h1>
                         <p class="mb-5">Yes, you can run unit tests and view the results directly within the app. The
                             integrated testing features allow for a streamlined .</p>
-                        <button  onclick="hide()" class="btn btn-primary">Buy Tickets</button>
+                        <button onclick="hide()" class="btn btn-primary">Buy Tickets</button>
                     </div>
                 </div>
             </div>
@@ -190,24 +190,21 @@
                             <button class="btn"><img src="images/Vector.svg"></button>
                         </div>
                         <div id="hide-element">
-                            <div id="show-element" class="hidden bg-slate-400 p-10 rounded-xl">
-                                <p class="text-2xl font-bold text-black">apni r sit select korte parben na vai</p>
-                            </div>
                             <div class="grid grid-cols-5 space-y-2">
                                 <div class="flex justify-center items-center">
                                     <h1>A</h1>
                                 </div>
                                 <div>
-                                    <button onclick="colorA1()" id="sit" class="btn">A1</button>
+                                    <button onclick="sitA1()" id="A1" class="btn">A1</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorA2()" id="sit2" class="btn">A2</button>
+                                    <button onclick="sitA2()" id="A2" class="btn">A2</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorA3()" id="sit3" class="btn">A3</button>
+                                    <button onclick="sitA3()" id="A3" class="btn">A3</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorA4()" id="sit4" class="btn">A4</button>
+                                    <button onclick="sitA4()" id="A4" class="btn">A4</button>
                                 </div>
                             </div>
                             <div class="grid grid-cols-5 space-y-2 ">
@@ -215,20 +212,20 @@
                                     <h1>B</h1>
                                 </div>
                                 <div>
-                                    <button onclick="colorB1()"  id="sit5"class="btn">B1</button>
+                                    <button onclick="sitB1()" id="B1" class="btn">B1</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorB2()" id="sit6" class="btn">B2</button>
+                                    <button onclick="sitB2()" id="B2" class="btn">B2</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorB3()" id="sit7" class="btn">B3</button>
+                                    <button onclick="sitB3()" id="B3" class="btn">B3</button>
                                 </div>
                                 <div>
-                                    <button onclick="colorB4()" id="sit8" class="btn">B4</button>
+                                    <button onclick="sitB4()" id="B4" class="btn">B4</button>
                                 </div>
                             </div>
                         </div>
-                       
+
                     </div>
 
                     <div>
@@ -238,7 +235,8 @@
 
                             <div class="p-5 space-y-5">
                                 <div class="grid grid-cols-3">
-                                    <h1 class="text-xl font-semibold">Seat <span id="count-sit" class="bg-green-500 p-2 rounded-xl">0</span></h1>
+                                    <h1 class="text-xl font-semibold">Seat <span id="count-sit"
+                                            class="bg-green-500 p-2 rounded-xl">0</span></h1>
                                     <h1 class="text-xl font-semibold">class</h1>
                                     <h1 class="text-xl font-semibold">Price</h1>
                                 </div>
@@ -255,16 +253,19 @@
                                 <hr>
                                 <div class="grid grid-cols-2">
                                     <h1 class="text-xl font-semibold">Total Price</h1>
-                                    <h1 class="text-center text-xl font-semibold"> BDT <span id="add-price">0</span> </h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span id="add-price">0</span>
+                                    </h1>
                                 </div>
                                 <div class="space-x-10">
-                                    <input id="apply-input" type="text" placeholder="Have any copupon?"
+                                    <input id="apply-input" type="text" placeholder="Have any coSpon?"
                                         class="input input-bordered w-full max-w-xs" />
-                                    <button id="apply-button" disabled class="btn bg-green-500 ">Apply</button>
+                                    <button onclick="grandPrice()" id="apply-button" disabled
+                                        class="btn bg-green-500 ">Apply</button>
                                 </div>
                                 <div class="grid grid-cols-2">
                                     <h1 class="text-xl font-semibold">Total Grand</h1>
-                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
+                                    <h1 class="text-center text-xl font-semibold"> BDT <span
+                                            id="discount-price-id">0</span> </h1>
                                 </div>
                             </div>
                         </div>
@@ -281,7 +282,7 @@
                             <label class="input input-bordered flex items-center gap-2">
                                 <input type="email" class="grow" placeholder="Enter your email id" />
                             </label>
-                            <button class="btn w-full bg-[#1DD100]">Next</button>
+                            <button onclick="ticketSectionHide()" class="btn w-full bg-[#1DD100]">Next</button>
                             <div class="flex justify-between">
                                 <a href="">Terms and Conditions</a>
                                 <a href="">Cancellation Policy</a>
@@ -289,265 +290,25 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
-        <!-- ticket section  -->
-        <section>
-            <!-- <div class="bg-white p-10">
-                <div class='grid grid-cols-2 '>
-
-                    <div>
-                        <h1 class="text-2xl font-semibold p-5">Select Your Seat</h1>
-                        <hr>
-                        <div class="flex justify-around p-5">
-                            <div class="flex">
-                                <img src="images/seat-gray.png" alt="">
-                                <p>Available</p>
-                            </div>
-                            <div class="flex">
-                                <img src="images/seat-green.png" alt="">
-                                <p class="text-green-400">Selected</p>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="p-5 flex justify-end">
-                            <button class="btn"><img src="images/Vector.svg"></button>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>A</h1>
-                            </div>
-                            <div>
-                                <button class="btn">A1</button>
-                            </div>
-                            <div>
-                                <button class="btn">A2</button>
-                            </div>
-                            <div>
-                                <button class="btn">A3</button>
-                            </div>
-                            <div>
-                                <button class="btn">A4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2 ">
-                            <div class="flex justify-center items-center">
-                                <h1>B</h1>
-                            </div>
-                            <div>
-                                <button class="btn">B1</button>
-                            </div>
-                            <div>
-                                <button class="btn">B2</button>
-                            </div>
-                            <div>
-                                <button class="btn">B3</button>
-                            </div>
-                            <div>
-                                <button class="btn">B4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>C</h1>
-                            </div>
-                            <div>
-                                <button class="btn">C1</button>
-                            </div>
-                            <div>
-                                <button class="btn">C2</button>
-                            </div>
-                            <div>
-                                <button class="btn">C3</button>
-                            </div>
-                            <div>
-                                <button class="btn">C4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>D</h1>
-                            </div>
-                            <div>
-                                <button class="btn">D1</button>
-                            </div>
-                            <div>
-                                <button class="btn">D2</button>
-                            </div>
-                            <div>
-                                <button class="btn">D3</button>
-                            </div>
-                            <div>
-                                <button class="btn">D4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>E</h1>
-                            </div>
-                            <div>
-                                <button class="btn">E1</button>
-                            </div>
-                            <div>
-                                <button class="btn">E2</button>
-                            </div>
-                            <div>
-                                <button class="btn">E3</button>
-                            </div>
-                            <div>
-                                <button class="btn">E4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>F</h1>
-                            </div>
-                            <div>
-                                <button class="btn">F1</button>
-                            </div>
-                            <div>
-                                <button class="btn">F2</button>
-                            </div>
-                            <div>
-                                <button class="btn">F3</button>
-                            </div>
-                            <div>
-                                <button class="btn">F4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>G</h1>
-                            </div>
-                            <div>
-                                <button class="btn">G1</button>
-                            </div>
-                            <div>
-                                <button class="btn">G2</button>
-                            </div>
-                            <div>
-                                <button class="btn">G3</button>
-                            </div>
-                            <div>
-                                <button class="btn">G4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>H</h1>
-                            </div>
-                            <div>
-                                <button class="btn">H1</button>
-                            </div>
-                            <div>
-                                <button class="btn">H2</button>
-                            </div>
-                            <div>
-                                <button class="btn">H3</button>
-                            </div>
-                            <div>
-                                <button class="btn">H4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>I</h1>
-                            </div>
-                            <div>
-                                <button class="btn">I1</button>
-                            </div>
-                            <div>
-                                <button class="btn">I2</button>
-                            </div>
-                            <div>
-                                <button class="btn">I3</button>
-                            </div>
-                            <div>
-                                <button class="btn">I4</button>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-5 space-y-2">
-                            <div class="flex justify-center items-center">
-                                <h1>J</h1>
-                            </div>
-                            <div>
-                                <button class="btn">J1</button>
-                            </div>
-                            <div>
-                                <button class="btn">J2</button>
-                            </div>
-                            <div>
-                                <button class="btn">J3</button>
-                            </div>
-                            <div>
-                                <button class="btn">J4</button>
-                            </div>
-                        </div>
+        <section id="success-section" class="hidden">
+            <div class="flex  justify-center items-center border py-16 bg-gray-300">
+                <div class="border bg-white rounded-2xl">
+                    <div class="flex justify-center mt-8">
+                        <img src="./images/success.png" alt="">
                     </div>
-
-                    <div>
-                        <h1 class="text-2xl font-semibold p-5">Select your sit</h1>
-                        <hr>
-                        <div class="bg-[#F7F8F8]">
-
-                            <div class="p-5 space-y-5">
-                                <div class="grid grid-cols-3">
-                                    <h1 class="text-xl font-semibold">Seat</h1>
-                                    <h1 class="text-xl font-semibold">class</h1>
-                                    <h1 class="text-xl font-semibold">Price</h1>
-                                </div>
-                                <hr>
-
-                                <div class="grid grid-cols-3">
-                                    <h1>C2</h1>
-                                    <h1>Economoy</h1>
-                                    <h1>550</h1>
-                                    <h1>C2</h1>
-                                    <h1>Economoy</h1>
-                                    <h1>550</h1>
-                                </div>
-                                <hr>
-                                <div class="grid grid-cols-2">
-                                    <h1 class="text-xl font-semibold">Total Price</h1>
-                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
-                                </div>
-                                <div class="space-x-10">
-                                    <input type="text" placeholder="Have any copupon?"
-                                        class="input input-bordered w-full max-w-xs" />
-                                    <button class="btn btn-primary bg-green-500">Apply</button>
-
-                                </div>
-                                <div class="grid grid-cols-2">
-                                    <h1 class="text-xl font-semibold">Total Grand</h1>
-                                    <h1 class="text-center text-xl font-semibold"> BDT <span>0</span> </h1>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-4 mt-5">
-                            <h1 class="text-xl font-semibold">Passenger Name*</h1>
-                            <label class="input input-bordered flex items-center gap-2">
-                                <input type="text" class="grow" placeholder="Enter your name" />
-                            </label>
-                            <h1 class="text-xl font-semibold">Phone Number*</h1>
-                            <label class="input input-bordered flex items-center gap-2">
-                                <input type="number" class="grow" placeholder=" Enter your phone number" />
-                            </label>
-                            <h1 class="text-xl font-semibold">Email ID</h1>
-                            <label class="input input-bordered flex items-center gap-2">
-                                <input type="email" class="grow" placeholder="Enter your email id" />
-                            </label>
-                            <button class="btn w-full bg-[#1DD100]">Next</button>
-                            <div class="flex justify-between">
-                                <a href="">Terms and Conditions</a>
-                                <a href="">Cancellation Policy</a>
-                            </div>
-                        </div>
+                    <p class="text-2xl text-center font-bold py-3">SUCCESS</p>
+                    <p class="font-bold p-4 md:w-96">Thank you for Booking Our Bus Seats.
+                        We are working hard to find the best service and deals for you.
+                    </p>
+                    <p class="p-4">Shortly you will find a confirmation in your email.</p>
+                    <div class="flex justify-center mt-6">
+                        <button onclick="reload()"
+                            class="btn w-60 rounded-3xl bg-green-700 text-white text-2xl mb-8">Continue</button>
                     </div>
                 </div>
-
-            </div> -->
+            </div>
         </section>
     </main>
     <footer>
