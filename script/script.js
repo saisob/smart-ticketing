@@ -1,19 +1,20 @@
 
 
-
+// header and discount section hidden 
 function hide() {
     const discountSection = document.getElementById('discount');
     const headerSection = document.getElementById('head');
     discountSection.classList.add('hidden')
     headerSection.classList.add('hidden');
 }
+// ticket section hide and success section unhide 
 function ticketSectionHide() {
     const ticketSection = document.getElementById('ticket-section');
     const successSection = document.getElementById('success-section');
     ticketSection.classList.add('hidden');
     successSection.classList.remove("hidden");
 }
-
+// added color in the sit button 
 function sitA1() {
     addColor("A1");
 }
@@ -38,7 +39,7 @@ function sitB3() {
 function sitB4() {
     addColor("B4");
 }
-
+// cupon discount 
 document.getElementById('apply-input').addEventListener('keyup', function (event) {
     const text = event.target.value;
     const deleteButton = document.getElementById('apply-button')
@@ -50,6 +51,7 @@ document.getElementById('apply-input').addEventListener('keyup', function (event
         deleteButton.setAttribute('disabled', true);
     }
 })
+// add price 
 function priceAdd(elementId) {
     const addPrice = document.getElementById(elementId);
     const addPriceValue = addPrice.innerText;
@@ -57,10 +59,11 @@ function priceAdd(elementId) {
     const newPrice = price + 550;
     addPrice.innerText = newPrice;
 }
-
+// reload website for continue button 
 function reload() {
     location.reload();
 }
+// discount math 
 function grandPrice() { 
     const addPrice = document.getElementById('discount-price-id');
     const addPriceValue = addPrice.innerText;
@@ -68,13 +71,7 @@ function grandPrice() {
     const discount = price * 0.15 || price * 0.20;
     const newPrice = price - discount;
     addPrice.innerText = newPrice;
-    
+
     const showElement = document.getElementById('coupon');
     showElement.classList.add('hidden');
 }
-
-
-// const grandTotal = priceAdd('discount-price-id');
-// const discount = grandTotal * .15;
-// const newGrandTotal = grandTotal - discount;
-// newPrice.innerText = newGrandTotal; 
